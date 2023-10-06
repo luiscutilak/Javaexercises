@@ -19,5 +19,10 @@ public class construtor {
             alu.situacaoAluno = STATUS.APROVADO;
         }
         System.out.println("A média do aluno é: " + alu.calcularMediaAluno() + "e o aluno está " + alu.situacaoAluno);
+        
+        //USO enum MATRICULA
+        alu.situacaoMatricula = Aluno.MATRICULA.MATRICULADO;
+        
+        System.out.println("O Aluno está: " + alu.situacaoMatricula);
     }
 }
