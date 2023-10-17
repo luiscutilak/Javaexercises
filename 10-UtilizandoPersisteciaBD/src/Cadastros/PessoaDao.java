@@ -48,17 +48,19 @@ public class PessoaDao extends Dao {
 			open();
 			stmt = con.prepareStatement("select * from pessoas where idPessoa = ? ");
 			stmt.setInt(1, cod);
+			rs = stmt.executeQuery();
+
 			try {
 				rs = stmt.executeQuery();			
 			}
 			catch (SQLException ex) {
 				throw new Exception(ex);
-//		        System.out.println("Falha ao recuperar o registro. Contate TI");
 			}
 			finally {
-				System.out.println("Fechando a conex�o com banco de dados no Finally");
+				System.out.println("Fechando a conexao com banco de dados no Finally");
 				close();
 			}
+			
 			Pessoa p = null;
 			if (rs != null) {
 				if (rs.next()) {
@@ -78,6 +80,8 @@ public class PessoaDao extends Dao {
 			stmt = con.prepareStatement("select * from pessoa");
 			rs = stmt.executeQuery();
 	        List<Pessoa> listaPessoas = new ArrayList<>();
+			//  Enquanto tiver resultado(rs), instancia Pessoa p, set idPessoa, setNomePessoa, setEmailPessoa
+			// e adiciona na listaPessoa.add(p).
 			while (rs.next()) {
 				Pessoa p = new Pessoa();
 				p.setIdPessoa(rs.getInt("idPessoa"));
