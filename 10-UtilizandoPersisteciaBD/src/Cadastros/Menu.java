@@ -7,9 +7,9 @@ public class Menu {
 		PessoaDao pd = new PessoaDao();
 
 		try {
-			//Abaixo passando os dados para a classe Pessoa através do construtor(** super() **) 
-			//Depois de construido o objeto pessoa(p1, p2) linhas 13,14
-			//É chamado os métodos da classe PessoaDao para incluir os dois objetos "p1,p2" no banco de dados.
+			// Abaixo passando os dados para a classe Pessoa através do construtor(** super() **) 
+			// Depois de construido o objeto pessoa(p1, p2) linhas 13,14
+			// É chamado os métodos da classe PessoaDao para incluir os dois objetos "p1,p2" no banco de dados.
 			// Incluir uma pessoa
 
 			Pessoa p1 = new Pessoa(3,"Maria", "maria@gmail.com");

@@ -23,8 +23,9 @@ public class PessoaDao extends Dao {
 
 	
 	public void alterarPessoa(Pessoa p) throws Exception {
+
 		open();
-		stmt = con.prepareStatement("update Pessoa set nomepessoa = ?, email = ? where idPessoa = ?");
+		stmt = con.prepareStatement("update pessoa set nomepessoa = ?, email = ? where idPessoa = ?");
 		stmt.setString(1, p.getNomePessoa());
 		stmt.setString(2, p.getEmail());
 		stmt.setInt(3, p.getIdPessoa());
