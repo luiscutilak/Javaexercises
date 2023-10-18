@@ -21,14 +21,14 @@ public class Menu {
 			// Alterar uma pessoa
 			// - Alterar a informa��o desejada usando o set(Classe encapsulada)
 
-			/*
+			
 			try {
 				Pessoa pes = pd.consultarPessoaIndividual(1);
 			
 				// se o resultado da consulta a pessoa retornar null e porque nao encontrou
 				// a pessoa ou seja se, pes diferente de null, entra no if
 				if (pes != null) {
-						pes.setEmail("jose2@gmail.com");
+						pes.setEmail("joao@gmail.com");
 						// chamar o metodo que contem o comando update
 						pd.alterarPessoa(pes);
 				} else {
@@ -48,9 +48,9 @@ public class Menu {
 			catch (Exception ex ){
 		        System.out.println("Alguma coisa deu errado no acesso ao banco de dados. Contate a TI");
 			}
- 			*/
+ 			
 			// Excluir uma pessoa    
-			// verificar se a pessoa existe por c�digo
+			// verificar se a pessoa existe por codigo
 			Pessoa pessoa1 = pd.consultarPessoaIndividual(1);
 			// chamar o metodo que contem o comando delete
 			pd.excluirPessoa(pessoa1);

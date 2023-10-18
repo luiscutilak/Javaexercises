@@ -36,7 +36,7 @@ public class PessoaDao extends Dao {
 	public void excluirPessoa(Pessoa p) throws Exception {
 
 		open();
-		stmt = con.prepareStatement("delete from Pessoa where idPessoa = ?");
+		stmt = con.prepareStatement("delete from pessoa where idPessoa = ?");
 		stmt.setInt(1, p.getIdPessoa());
 		stmt.execute();
 		stmt.close();
@@ -46,7 +46,7 @@ public class PessoaDao extends Dao {
 	// retornando um objeto
 	public Pessoa consultarPessoaIndividual(int cod) throws Exception {
 			open();
-			stmt = con.prepareStatement("select * from pessoas where idPessoa = ? ");
+			stmt = con.prepareStatement("select * from pessoa where idPessoa = ? ");
 			stmt.setInt(1, cod);
 			rs = stmt.executeQuery();
 
